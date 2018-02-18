@@ -1,0 +1,99 @@
+﻿
+@{
+    ViewBag.Title = "RegisterPage";
+}
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="text-center text-white mb-4">Bootstrap 4 Login Form</h2>
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <span class="anchor" id="formLogin"></span>
+                    <!-- form card login -->
+                    <div class="card rounded-0">
+                        <div class="card-header">
+                            <h3 class="mb-0">Register</h3>
+                        </div>
+                        <div class="card-body">
+                            @{
+                                string s = "";
+                                if (ViewBag.Message != null)
+                                {
+                                    s = ViewBag.Message;
+                                }
+
+                                if (!s.Equals(""))
+                                {
+                                    <div class="alert alert-danger alert-dismissable fade show">
+                                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                        <strong>@s</strong>
+                                    </div>
+                                    //ViewBag.Message = "";
+                                }
+                            }
+
+                            <form class="form" role="form" autocomplete="off" id="formLogin" action="/User/Register">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="uname1">Name</label>
+                                            <input type="text" class="form-control form-control-lg rounded-0" name="Name" id="uname1" required="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="uname1">First Name</label>
+                                            <input type="text" class="form-control form-control-lg rounded-0" name="FirstName" id="uname1" required="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="uname1">Birth</label>
+                                            <input type="date" class="form-control form-control-lg rounded-0" name="Birth" id="uname1" required="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="uname1">Address</label>
+                                            <input type="text" class="form-control form-control-lg rounded-0" name="Address" id="uname1" required="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="uname1">Mail</label>
+                                            <input type="text" class="form-control form-control-lg rounded-0" name="Mail" id="uname1" required="">
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="uname1">Login</label>
+                                            <input type="text" class="form-control form-control-lg rounded-0" name="Login" id="uname1" required="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Password</label>
+                                            <input type="password" class="form-control form-control-lg rounded-0" name="Password" id="pwd1" required="" autocomplete="new-password">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="uname1">Description</label>
+                                            <input type="text" class="form-control form-control-lg rounded-0" name="Description" id="uname1" required="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="uname1">Image</label>
+                                            <input type="text" class="form-control form-control-lg rounded-0" name="Image" id="uname1" required="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="uname1">Phone</label>
+                                            <input type="text" class="form-control form-control-lg rounded-0" name="Phone" id="uname1" required="">
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <input type="submit" class="btn btn-success btn-lg float-right " value="login" />
+
+                            </form>
+                        </div>
+                        <!--/card-block-->
+                    </div>
+                    <!-- /form card login -->
+                </div>
+
+            </div>
+            <!--/row-->
+        </div>
+        <!--/col-->
+    </div>
+    <!--/row-->
+</div>

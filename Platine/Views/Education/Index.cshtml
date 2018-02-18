@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Platine.Database.BusinessObject.Education>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>my Educations</h2>
+
+<p>
+    <a class="btn btn-outline-info" href="/Education/Create">add new Education</a>
+</p>
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-danger" role="alert">
+        <strong>D'oh!!</strong> @ViewBag.Message.
+    </div>
+}
+<table class="table">
+    <tr>
+        <th>Start</th>
+        <th>Deegree</th>
+        <th>Place</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Start</td>
+            <td>@item.Deegree</td>
+            <td>@item.Place</td>
+            <td>
+                <a href="/Education/Detail/@item.Id" class=" btn btn-outline-primary">Detail</a>
+                <a href="/Education/Delete/@item.Id" class=" btn btn-outline-danger">Delete</a>
+            </td>
+        </tr>
+    }
+
+</table>

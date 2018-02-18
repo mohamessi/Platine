@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Platine.Database.BusinessObject.Experience>
+
+@{
+    ViewBag.Title = "ExperiencePage";
+}
+
+<h2>my Experiences</h2>
+
+<p>
+    <a href="/Experience/Create" class="btn btn-outline-info">add new Experience</a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Start)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Job)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Enterprise)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Start)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Job)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Enterprise)
+            </td>
+
+            <td>
+                <a href="/Experience/Detail/@item.Id" class=" btn btn-outline-primary">Detail</a>
+                <a href="/Experience/Delete/@item.Id" class=" btn btn-outline-danger">Delete</a>
+            </td>
+        </tr>
+    }
+
+</table>
