@@ -28,6 +28,7 @@ namespace Platine.Controllers
         {
              if (id.Equals("momo"))
                return View(AleaUser.MomoUser());
+
             User u = DataAccessAction.user.GetUserByLogin(id);
             List<Experience> experiences = DataAccessAction.experience.GetExperienceByUserId(u.Id);
             List<Education> educations = DataAccessAction.education.GetEducationsByUserId(u.Id);
