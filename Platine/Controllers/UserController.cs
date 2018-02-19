@@ -12,7 +12,7 @@ using System.Text.RegularExpressions;
 
 namespace Platine.Controllers
 {
-   
+
     public class UserController : Controller
     {
         [SessionExpire]
@@ -62,6 +62,26 @@ namespace Platine.Controllers
             DataAccessAction.user.UpdateUser(u);
             return Redirect("/User");
         }
+        [SessionExpire]
+        public ActionResult EditProfil()
+        {
+            Guid id = (Guid)Session["PlatineId"];
+            return View(DataAccessAction.user.GetUserById(id));
+        }
+
+        public ActionResult SubmitEditProfil(User user)
+        {
+            try
+            {
+                DataAccessAction.user.UpdateUser(user);
+            }
+            catch (PlatineException p)
+            {
+
+                ViewBag.Error = p.Message;
+            }
+            return Redirect("/User");
+        }
 
         public async System.Threading.Tasks.Task<ActionResult> SendMailAsync()
         {
@@ -84,7 +104,7 @@ namespace Platine.Controllers
             Session["PlatineLogin"] = null;
             return Redirect("/");
         }
-       
+
 
 
     }

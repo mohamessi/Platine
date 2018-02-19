@@ -46,7 +46,7 @@ namespace Platine.Controllers
                 ViewBag.Message = p.Message;
 
             }
-            return Redirect("/Experience");
+            return Redirect("/Education");
         }
 
         public ActionResult Detail(Guid id)

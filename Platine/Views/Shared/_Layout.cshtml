@@ -20,47 +20,56 @@
 
 
                     @if (Session["PlatineId"] == null)
-                    {
-                        <li class="nav-item active">
-                            <a class="nav-link" href="/Home/Profil/momo" target="_blank">Momo<span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="/">Login<span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="/User/RegisterPage">Register<span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="/Home/ForgotPassword">Forgot Password<span class="sr-only">(current)</span></a>
-                        </li>
+    {
+                <li class="nav-item active">
+                    <a class="nav-link" href="/Home/Profil/momo" target="_blank">Momo<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Login<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/User/RegisterPage">Register<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/Home/ForgotPassword">Forgot Password<span class="sr-only">(current)</span></a>
+                </li>
 
 
 
-                    }
-                    else
-                    {
-                        <li class="nav-item active">
-                            <a class="nav-link" href="/Home/Profil/@Session["PlatineLogin"]" target="_blank">My resume<span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="/">My Profil<span class="sr-only">(current)</span></a>
-                        </li>
+}
+else
+{
+                <li class="nav-item active">
+                    <a class="nav-link" href="/Home/Profil/@Session["PlatineLogin"]" target="_blank">My resume<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">My Profil<span class="sr-only">(current)</span></a>
+                </li>
 
-                        <li class="nav-item active">
-                            <a class="nav-link" href="/Experience">My Experience<span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="/Education">My Education<span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="/Message">My Messages<span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="/User/Logout">Logout<span class="sr-only">(current)</span></a>
-                        </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/Experience">My Experiences<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/Education">My Educations<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/Skill">My Skills<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/Project">My Projects<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/Interest">My Interests<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/Message">My Messages<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/User/Logout">Logout<span class="sr-only">(current)</span></a>
+                </li>
 
 
-                    }
+}
 
 
 

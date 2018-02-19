@@ -152,6 +152,7 @@
     <Compile Include="Controllers\ExperienceController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SessionExpireAttribute.cs" />
+    <Compile Include="Controllers\SkillController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Database\BusinessObject\Education.cs" />
     <Compile Include="Database\BusinessObject\Experience.cs" />
@@ -164,9 +165,11 @@
     <Compile Include="Database\DataAccessAction.cs" />
     <Compile Include="Database\DatabaseController\EducationEntity.cs" />
     <Compile Include="Database\DatabaseController\ExperienceEntity.cs" />
+    <Compile Include="Database\DatabaseController\SkillEntity.cs" />
     <Compile Include="Database\DatabaseController\UserEntity.cs" />
     <Compile Include="Database\DatabaseInterface\IEducation.cs" />
     <Compile Include="Database\DatabaseInterface\IExperience.cs" />
+    <Compile Include="Database\DatabaseInterface\ISkill.cs" />
     <Compile Include="Database\DatabaseInterface\IUser.cs" />
     <Compile Include="Exceptions\UserException.cs" />
     <Compile Include="Global.asax.cs">
@@ -349,9 +352,11 @@
     <Content Include="Views\User\EditPasswordPage.cshtml" />
     <Content Include="Views\Education\Create.cshtml" />
     <Content Include="Views\Education\Detail.cshtml" />
+    <Content Include="Views\User\EditProfil.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Skill\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

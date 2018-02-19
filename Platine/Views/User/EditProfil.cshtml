@@ -1,0 +1,96 @@
+﻿@model Platine.Database.BusinessObject.User
+
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="text-center text-white mb-4">Edit Profil Form</h2>
+            <div class="row">
+                <div class="col-md-10    mx-auto">
+                    <span class="anchor" id="formLogin"></span>
+                    <!-- form card login -->
+                    <div class="card rounded-0">
+                        <div class="card-header">
+                            <h3 class="mb-0">Edit Profil : @Session["PlatineLogin"]</h3>
+                        </div>
+                        <div class="card-body">
+
+                            
+                            @if (ViewBag.Error != null)
+                            {
+                                <div class="alert alert-danger alert-dismissable fade show">
+                                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                    <strong>@ViewBag.Error</strong>
+                                </div>
+                            }
+
+
+
+                            <form class="form" role="form" autocomplete="off" id="formLogin" action="/User/SubmitEditProfil">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            
+                                            <input type="hidden" class="form-control form-control-lg rounded-0" name="Id" value="@Model.Id" required="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="uname1">Name</label>
+                                            <input type="text" class="form-control form-control-lg rounded-0" name="Name" value="@Model.Name" required="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="uname1">First Name</label>
+                                            <input type="text" class="form-control form-control-lg rounded-0" name="FirstName" value="@Model.FirstName"  required="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="uname1">Birth</label>
+                                            <input type="date" class="form-control form-control-lg rounded-0" name="Birth" value="@Model.Birth.ToString("d")"  required="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="uname1">Address</label>
+                                            <input type="text" class="form-control form-control-lg rounded-0" name="Address"value="@Model.Address"  required="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="uname1">Mail</label>
+                                            <input type="text" class="form-control form-control-lg rounded-0" name="Mail" value="@Model.Mail"  required="" >
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            
+                                            <input type="hidden" class="form-control form-control-lg rounded-0" name="Login" value="@Model.Login" required="">
+                                        </div>
+                                        <div class="form-group">
+                                            
+                                            <input type="hidden" class="form-control form-control-lg rounded-0" name="Password" value="@Model.Password"  required="" autocomplete="new-password">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="uname1">Description</label>
+                                            <input type="text" class="form-control form-control-lg rounded-0" name="Description" value="@Model.Description"  required="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="uname1">Image</label>
+                                            <input type="text" class="form-control form-control-lg rounded-0" name="Image" value="@Model.Image"  required="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="uname1">Phone</label>
+                                            <input type="text" class="form-control form-control-lg rounded-0" name="Phone" value="@Model.Phone"   required="">
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <input type="submit" class="btn btn-success btn-lg float-right " value="Edit Profil" />
+
+                            </form>
+                        </div>
+                        <!--/card-block-->
+                    </div>
+                    <!-- /form card login -->
+                </div>
+
+            </div>
+            <!--/row-->
+        </div>
+        <!--/col-->
+    </div>
+    <!--/row-->
+</div>

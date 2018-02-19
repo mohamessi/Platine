@@ -13,5 +13,6 @@ namespace Platine.Database
         public static IUser user = new UserEntity();
         public static IExperience experience = new ExperienceEntity();
         public static IEducation education = new EducationEntity();
+        public static ISkill skill = new SkillEntity(); 
     }
 }
